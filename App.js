@@ -33,6 +33,8 @@ import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as dupa from '@tensorflow/tfjs-react-native';
 import * as jpeg from 'jpeg-js';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import {PermissionsAndroid} from 'react-native';
 
 const App = () => {
   // State to indicate if TensorFlow.js finished loading
@@ -41,6 +43,9 @@ const App = () => {
     'https://kc-media-cdn-live.azureedge.net/cache/e/9/d/b/3/7/e9db37b1ae4c648023392626e7106aa18ec6dc0f.jpg',
   );
   const [displayText, setDisplayText] = useState('loading');
+  const options = {
+    mediaType: 'photo',
+  };
 
   // useEffect(() => {
   //   async function waitForTensorFlowJs() {
@@ -94,6 +99,34 @@ const App = () => {
     }
     return tf.tensor3d(buffer, [height, width, 3]);
   }
+  async function handleCamera() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.CAMERA,
+        {
+          title: 'Cool Photo App Camera Permission',
+          message:
+            'Cool Photo App needs access to your camera ' +
+            'so you can take awesome pictures.',
+        },
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log('Camera granted');
+      } else if (PermissionsAndroid.RESULTS.DENIED) {
+        console.log('Camera permission denied');
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+    launchCamera(options, response => {
+      console.log(response);
+    });
+  }
+  function handleImageLibrary() {
+    launchImageLibrary(options, response => {
+      console.log(response);
+    });
+  }
 
   return (
     <View style={styles.container}>
@@ -111,6 +144,8 @@ const App = () => {
       />
       <Image style={styles.imageStyle} source={{uri: url}} />
       <Button title="classify Image" onPress={() => getPredition(url)} />
+      <Button title="launchcamera" onPress={() => handleCamera()} />
+      <Button title="launchLibrary" onPress={() => handleImageLibrary()} />
       <Text>{displayText}</Text>
     </View>
   );
