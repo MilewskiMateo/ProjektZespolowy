@@ -24,6 +24,7 @@ const App = () => {
     await tf.ready();
     setDisplayText('Loading Mobile Net');
     const model = await mobilenet.load();
+    console.log(model);
     setDisplayText('Getting Array Buffer');
     const imageDataArrayBuffer = decode(imgBase64);
     const imageData = new Uint8Array(imageDataArrayBuffer);
