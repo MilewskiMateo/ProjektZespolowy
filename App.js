@@ -4,14 +4,14 @@ import {StyleSheet, View, Text, TextInput, Button, Image} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-import * as dupa from '@tensorflow/tfjs-react-native';
+import * as tfReact from '@tensorflow/tfjs-react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import {PermissionsAndroid} from 'react-native';
-import {decode, encode} from 'base64-arraybuffer';
+import {decode} from 'base64-arraybuffer';
 
 const App = () => {
-  const [isTfReady, setTfReady] = useState(false);
   const [url, setUrl] = useState();
+  const [model, setModel] = useState(null);
   const [imgBase64, setImgBase64] = useState();
   const [displayText, setDisplayText] = useState('loading');
   const options = {
@@ -19,19 +19,32 @@ const App = () => {
     includeBase64: true,
   };
 
-  async function getPredition() {
-    setDisplayText('Loading Tensorflow');
+  useEffect(() => {
+    loadModel();
+  }, []);
+
+  async function loadModel() {
     await tf.ready();
-    setDisplayText('Loading Mobile Net');
     const model = await mobilenet.load();
+    setModel(model);
     console.log(model);
-    setDisplayText('Getting Array Buffer');
+  }
+
+  async function getPredition() {
+    console.log('Loading Mobile');
+    if (model == null) {
+      await tf.ready();
+      setModel(await mobilenet.load());
+    }
+    console.log('Array Buffer');
+
     const imageDataArrayBuffer = decode(imgBase64);
     const imageData = new Uint8Array(imageDataArrayBuffer);
-    setDisplayText('Getting Image Tensor');
-    const imageTensor = dupa.decodeJpeg(imageData);
-    setDisplayText('Getting Classification Result');
+    console.log('Image Tensor');
+    const imageTensor = tfReact.decodeJpeg(imageData);
+    console.log('Classification');
     const prediction = await model.classify(imageTensor);
+    console.log('Stringify');
     setDisplayText(JSON.stringify(prediction));
   }
 
