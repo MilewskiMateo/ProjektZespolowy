@@ -9,7 +9,7 @@ import * as tfReact from '@tensorflow/tfjs-react-native';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import {PermissionsAndroid} from 'react-native';
 import {decode} from 'base64-arraybuffer';
-import GraphQLTest from './GraphQLtest.js';
+import DescriptionFromApiProvider from './DescriptionFromApiProvider.js';
 
 const client = new ApolloClient({
   uri: 'https://graphql-api-dog-breeds.herokuapp.com/graphql',
@@ -21,6 +21,7 @@ const App = () => {
   const [model, setModel] = useState(null);
   const [imgBase64, setImgBase64] = useState();
   const [displayText, setDisplayText] = useState('loading');
+  const [clasyficationResult, setClasyficationResult] = useState(null);
   const options = {
     mediaType: 'photo',
     includeBase64: true,
@@ -53,6 +54,7 @@ const App = () => {
     const prediction = await model.classify(imageTensor);
     // console.log('Stringify');
     setDisplayText(JSON.stringify(prediction));
+    setClasyficationResult(prediction[0].className);
   }
 
   async function handleCamera() {
@@ -88,11 +90,11 @@ const App = () => {
     <ApolloProvider client={client}>
       <View style={styles.container}>
         <Image style={styles.imageStyle} source={{uri: url}} />
-        <GraphQLTest />
+        <Text>Result: {clasyficationResult}</Text>
+        <DescriptionFromApiProvider breedName={clasyficationResult} />
         <Button title="classify Image" onPress={() => getPredition(url)} />
         <Button title="launchcamera" onPress={() => handleCamera()} />
         <Button title="launchLibrary" onPress={() => handleImageLibrary()} />
-        <Text>{displayText}</Text>
       </View>
     </ApolloProvider>
   );
@@ -106,8 +108,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   imageStyle: {
-    width: 200,
-    height: 200,
+    width: 100,
+    height: 100,
   },
   sectionDescription: {
     marginTop: 8,
