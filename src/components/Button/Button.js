@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, View, Text} from 'react-native';
 import DropShadow from 'react-native-drop-shadow';
 import {Colors, Typography} from '../../styles';
 
@@ -8,14 +8,14 @@ const Button = ({label, secondary, onPress}) => {
 
   return (
     <TouchableOpacity onPress={onPress}>
-      <DropShadow style={s.container}>
+      <View style={s.container}>
         <Text
           style={
             secondary ? Typography.BUTTON.SECONDARY : Typography.BUTTON.PRIMARY
           }>
           {label}
         </Text>
-      </DropShadow>
+      </View>
     </TouchableOpacity>
   );
 };
