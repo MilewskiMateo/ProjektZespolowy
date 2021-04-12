@@ -27,7 +27,9 @@ async function storeData(value) {
 async function changeFavourite(id) {
   const data = await getData();
   objIndex = data.findIndex(obj => obj.id === id);
+  console.log(data[objIndex].favourite);
   data[objIndex].favourite = !data[objIndex].favourite;
+  console.log(data[objIndex].favourite);
   await storeData(data);
 }
 

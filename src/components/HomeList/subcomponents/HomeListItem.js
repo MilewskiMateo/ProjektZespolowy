@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Colors, Typography} from '../../../styles';
-
+import asHelper from '../../../utils/as.helper';
 import Favourite from '../../Favourite/Favourite';
 
 const HomeListItem = ({
@@ -16,9 +16,15 @@ const HomeListItem = ({
   percent,
   imageUri,
   favourite,
-  handleFavourite,
   onPress,
+  id,
+  rerender,
 }) => {
+  async function handleFavourite() {
+    await asHelper.changeFavourite(id);
+    rerender();
+  }
+
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <ImageBackground source={{uri: imageUri}} style={styles.image}>

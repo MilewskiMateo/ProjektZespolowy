@@ -1,24 +1,26 @@
+import {iterateObserversSafely} from '@apollo/client/utilities';
 import * as React from 'react';
 import {StyleSheet, View, Text, FlatList} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import asHelper from '../../utils/as.helper';
 
 import HomeListItem from './subcomponents/HomeListItem';
 
-const renderItem = ({item}) => (
-  <HomeListItem
-    label={item.label}
-    percent={item.percent}
-    imageUri={item.imageUri}
-    favourite={item.favourite}
-    handleFavourite={async () => {
-      await asHelper.changeFavourite(item.id);
-    }}
-    onPress={async () => await asHelper.changeFavourite(id)}
-    onPress={() => console.log('PRESSED')}
-  />
-);
-const HomeList = ({data}) => {
+const RenderItem = ({item, rerender}) => {
+  return (
+    <HomeListItem
+      label={item.label}
+      percent={item.percent}
+      imageUri={item.imageUri}
+      favourite={item.favourite}
+      rerender={rerender}
+      id={item.id}
+      // onPress={async () => await asHelper.changeFavourite(id)}
+      // onPress={() => console.log(item.favourite)}
+    />
+  );
+};
+
+const HomeList = ({rerender, data}) => {
   const insets = useSafeAreaInsets();
   const s = styles(insets);
 
@@ -28,7 +30,7 @@ const HomeList = ({data}) => {
       showsHorizontalScrollIndicator={false}
       style={s.container}
       data={data}
-      renderItem={renderItem}
+      renderItem={({item}) => <RenderItem item={item} rerender={rerender} />}
       keyExtractor={item => item.id}
       ItemSeparatorComponent={() => <View style={s.separator} />}
       ListFooterComponent={() => <View style={s.footer} />}

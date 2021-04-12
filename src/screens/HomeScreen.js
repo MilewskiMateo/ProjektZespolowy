@@ -26,6 +26,11 @@ export default ({navigation}) => {
     fetch();
   }, [isFocused]);
 
+  async function rerender() {
+    const data = await asHelper.getData();
+    setData(data);
+  }
+
   return (
     <SafeAreaView style={s.container}>
       <Text style={[Typography.HEADERS.H1, s.header]}>
@@ -34,6 +39,7 @@ export default ({navigation}) => {
       <TopTabBar filter={filter} setFilter={setFilter} />
       {data && (
         <HomeList
+          rerender={rerender}
           data={
             filter === 'all'
               ? data
