@@ -18,6 +18,25 @@
 		2DCD954D1E0B4F2C00145EB5 /* MyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyAppTests.m */; };
 		418860D5BB34ED768EEE7FB6 /* libPods-MyApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134252F0580897541C48A8C2 /* libPods-MyApp-tvOSTests.a */; };
 		46878DA3353CFEB9CCD23B14 /* libPods-MyApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FAE06911931F678698C8E4 /* libPods-MyApp-tvOS.a */; };
+		6582D12B262347B700CDCC5B /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C11A9E5AC5284DA996D8D4E9 /* icomoon.ttf */; };
+		6582D13C262347B700CDCC5B /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F50B268350C4570996113E7 /* Metropolis-Black.otf */; };
+		6582D13D262347B700CDCC5B /* Metropolis-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5838514262BC4876A0BE77C2 /* Metropolis-BlackItalic.otf */; };
+		6582D13E262347B700CDCC5B /* Metropolis-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F56343CEC2D4748ACBC2F10 /* Metropolis-Bold.otf */; };
+		6582D13F262347B700CDCC5B /* Metropolis-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B733D278EE2D424C9F4B8060 /* Metropolis-BoldItalic.otf */; };
+		6582D140262347B700CDCC5B /* Metropolis-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1362E298F4343919B3E01F1 /* Metropolis-ExtraBold.otf */; };
+		6582D141262347B700CDCC5B /* Metropolis-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34E9E58A823048528D77DD42 /* Metropolis-ExtraBoldItalic.otf */; };
+		6582D142262347B700CDCC5B /* Metropolis-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC1B2AC9F4634625AC529316 /* Metropolis-ExtraLight.otf */; };
+		6582D143262347B700CDCC5B /* Metropolis-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEBB44F8F264F67BEA54696 /* Metropolis-ExtraLightItalic.otf */; };
+		6582D144262347B700CDCC5B /* Metropolis-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 705095E246C64216BACBE638 /* Metropolis-Light.otf */; };
+		6582D145262347B700CDCC5B /* Metropolis-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB37F114C643D08ADEFAE8 /* Metropolis-LightItalic.otf */; };
+		6582D146262347B700CDCC5B /* Metropolis-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4BCD61DCADB40DEB5FF4DCE /* Metropolis-Medium.otf */; };
+		6582D147262347B700CDCC5B /* Metropolis-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C451E403E154EFBAAEFBF6B /* Metropolis-MediumItalic.otf */; };
+		6582D148262347B700CDCC5B /* Metropolis-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED218DB696EF4E5CAC06D5BD /* Metropolis-Regular.otf */; };
+		6582D149262347B700CDCC5B /* Metropolis-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79BC3E3DD34042A982FE0920 /* Metropolis-RegularItalic.otf */; };
+		6582D14A262347B700CDCC5B /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA795666D2BE4F3BBD136F68 /* Metropolis-SemiBold.otf */; };
+		6582D14B262347B700CDCC5B /* Metropolis-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8488D051394B4E21B522616B /* Metropolis-SemiBoldItalic.otf */; };
+		6582D14C262347B700CDCC5B /* Metropolis-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E14052B77C24F1F98C9CAA4 /* Metropolis-Thin.otf */; };
+		6582D14D262347B700CDCC5B /* Metropolis-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0B2D7663FC3E4B9AAA413C71 /* Metropolis-ThinItalic.otf */; };
 		E65388B84F93F3F4E2D2B0F2 /* libPods-MyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90478CB15F61970FDEEE384F /* libPods-MyApp.a */; };
 		F2B0FEFC467FBBF6CE4ED9B2 /* libPods-MyAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E9C4DF11E9CD8C9E7914F6 /* libPods-MyAppTests.a */; };
 /* End PBXBuildFile section */
@@ -44,6 +63,11 @@
 		00E356EE1AD99517003FC87E /* MyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAppTests.m; sourceTree = "<group>"; };
+		0B2D7663FC3E4B9AAA413C71 /* Metropolis-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-ThinItalic.otf"; path = "../src/assets/fonts/Metropolis-ThinItalic.otf"; sourceTree = "<group>"; };
+		0D44E4C0AD6D43C681076654 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		0E2C3548AA114451A22152A5 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		111E73F90108414CAC877653 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		127ECCCFD0F54B27A77FAE60 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		134252F0580897541C48A8C2 /* libPods-MyApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MyApp/AppDelegate.h; sourceTree = "<group>"; };
@@ -52,21 +76,51 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyApp/main.m; sourceTree = "<group>"; };
+		1F50B268350C4570996113E7 /* Metropolis-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-Black.otf"; path = "../src/assets/fonts/Metropolis-Black.otf"; sourceTree = "<group>"; };
 		29DF71B7136D73E1CF56BFAA /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2CE3E4DCAE9B414C876CDBE2 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* MyApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MyApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D6FC9A181CE3EB8C6972DB /* Pods-MyApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MyApp-tvOS/Pods-MyApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		34E9E58A823048528D77DD42 /* Metropolis-ExtraBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-ExtraBoldItalic.otf"; path = "../src/assets/fonts/Metropolis-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		3E14052B77C24F1F98C9CAA4 /* Metropolis-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-Thin.otf"; path = "../src/assets/fonts/Metropolis-Thin.otf"; sourceTree = "<group>"; };
 		3FEE1B1DDFBB4C26A6912A6D /* Pods-MyApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MyApp-tvOS/Pods-MyApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		4204C6C5E7C6BA6628A378E9 /* Pods-MyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyAppTests/Pods-MyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		43FAE06911931F678698C8E4 /* libPods-MyApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DAB37F114C643D08ADEFAE8 /* Metropolis-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-LightItalic.otf"; path = "../src/assets/fonts/Metropolis-LightItalic.otf"; sourceTree = "<group>"; };
+		5838514262BC4876A0BE77C2 /* Metropolis-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-BlackItalic.otf"; path = "../src/assets/fonts/Metropolis-BlackItalic.otf"; sourceTree = "<group>"; };
 		5ACC9787BBAB0A1D9DC05D29 /* Pods-MyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyAppTests/Pods-MyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C451E403E154EFBAAEFBF6B /* Metropolis-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-MediumItalic.otf"; path = "../src/assets/fonts/Metropolis-MediumItalic.otf"; sourceTree = "<group>"; };
+		705095E246C64216BACBE638 /* Metropolis-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-Light.otf"; path = "../src/assets/fonts/Metropolis-Light.otf"; sourceTree = "<group>"; };
+		79BC3E3DD34042A982FE0920 /* Metropolis-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-RegularItalic.otf"; path = "../src/assets/fonts/Metropolis-RegularItalic.otf"; sourceTree = "<group>"; };
 		80E9C4DF11E9CD8C9E7914F6 /* libPods-MyAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8488D051394B4E21B522616B /* Metropolis-SemiBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-SemiBoldItalic.otf"; path = "../src/assets/fonts/Metropolis-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		8F56343CEC2D4748ACBC2F10 /* Metropolis-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-Bold.otf"; path = "../src/assets/fonts/Metropolis-Bold.otf"; sourceTree = "<group>"; };
 		90478CB15F61970FDEEE384F /* libPods-MyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		967790629CF8439882125616 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		9B5E16FFBA284909978BA746 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		A27D26140CF248968352C112 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		A78E061AF3194AA6AE10B11F /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		AC5DDE766306422BBA167B86 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		ACD30DCE0A1A4DE480DBF3FC /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		ADE3EB16DD9A42EF93672231 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		B733D278EE2D424C9F4B8060 /* Metropolis-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-BoldItalic.otf"; path = "../src/assets/fonts/Metropolis-BoldItalic.otf"; sourceTree = "<group>"; };
+		B90E50D5086D4F7CA4CA4079 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		BC1B2AC9F4634625AC529316 /* Metropolis-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-ExtraLight.otf"; path = "../src/assets/fonts/Metropolis-ExtraLight.otf"; sourceTree = "<group>"; };
+		BF4FFAD9F35040EA85C27362 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		C11A9E5AC5284DA996D8D4E9 /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = ../src/assets/icons/icomoon.ttf; sourceTree = "<group>"; };
 		C2963511501221E78850E321 /* Pods-MyApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyApp-tvOSTests/Pods-MyApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C727D3B51612EA6E01B91738 /* Pods-MyApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyApp-tvOSTests/Pods-MyApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7755196001431E8C888F43 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		DA795666D2BE4F3BBD136F68 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-SemiBold.otf"; path = "../src/assets/fonts/Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
+		DF511A3752D74349AE0DB01C /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		E1362E298F4343919B3E01F1 /* Metropolis-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-ExtraBold.otf"; path = "../src/assets/fonts/Metropolis-ExtraBold.otf"; sourceTree = "<group>"; };
 		EB257AFB300505FF8D5E8632 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
+		ED218DB696EF4E5CAC06D5BD /* Metropolis-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-Regular.otf"; path = "../src/assets/fonts/Metropolis-Regular.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EEEBB44F8F264F67BEA54696 /* Metropolis-ExtraLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-ExtraLightItalic.otf"; path = "../src/assets/fonts/Metropolis-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		F4BCD61DCADB40DEB5FF4DCE /* Metropolis-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Metropolis-Medium.otf"; path = "../src/assets/fonts/Metropolis-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +202,6 @@
 				4204C6C5E7C6BA6628A378E9 /* Pods-MyAppTests.debug.xcconfig */,
 				5ACC9787BBAB0A1D9DC05D29 /* Pods-MyAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +234,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1AF6DA232693E1EFACB5B76C /* Pods */,
+				9F6528525F5F494D84807DEE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -196,6 +250,48 @@
 				2D02E4901E0B4A5D006451C7 /* MyApp-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9F6528525F5F494D84807DEE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C11A9E5AC5284DA996D8D4E9 /* icomoon.ttf */,
+				BF4FFAD9F35040EA85C27362 /* AntDesign.ttf */,
+				967790629CF8439882125616 /* Entypo.ttf */,
+				127ECCCFD0F54B27A77FAE60 /* EvilIcons.ttf */,
+				ADE3EB16DD9A42EF93672231 /* Feather.ttf */,
+				A78E061AF3194AA6AE10B11F /* FontAwesome.ttf */,
+				0E2C3548AA114451A22152A5 /* FontAwesome5_Brands.ttf */,
+				0D44E4C0AD6D43C681076654 /* FontAwesome5_Regular.ttf */,
+				DA7755196001431E8C888F43 /* FontAwesome5_Solid.ttf */,
+				B90E50D5086D4F7CA4CA4079 /* Fontisto.ttf */,
+				2CE3E4DCAE9B414C876CDBE2 /* Foundation.ttf */,
+				ACD30DCE0A1A4DE480DBF3FC /* Ionicons.ttf */,
+				AC5DDE766306422BBA167B86 /* MaterialCommunityIcons.ttf */,
+				111E73F90108414CAC877653 /* MaterialIcons.ttf */,
+				9B5E16FFBA284909978BA746 /* Octicons.ttf */,
+				A27D26140CF248968352C112 /* SimpleLineIcons.ttf */,
+				DF511A3752D74349AE0DB01C /* Zocial.ttf */,
+				1F50B268350C4570996113E7 /* Metropolis-Black.otf */,
+				5838514262BC4876A0BE77C2 /* Metropolis-BlackItalic.otf */,
+				8F56343CEC2D4748ACBC2F10 /* Metropolis-Bold.otf */,
+				B733D278EE2D424C9F4B8060 /* Metropolis-BoldItalic.otf */,
+				E1362E298F4343919B3E01F1 /* Metropolis-ExtraBold.otf */,
+				34E9E58A823048528D77DD42 /* Metropolis-ExtraBoldItalic.otf */,
+				BC1B2AC9F4634625AC529316 /* Metropolis-ExtraLight.otf */,
+				EEEBB44F8F264F67BEA54696 /* Metropolis-ExtraLightItalic.otf */,
+				705095E246C64216BACBE638 /* Metropolis-Light.otf */,
+				4DAB37F114C643D08ADEFAE8 /* Metropolis-LightItalic.otf */,
+				F4BCD61DCADB40DEB5FF4DCE /* Metropolis-Medium.otf */,
+				5C451E403E154EFBAAEFBF6B /* Metropolis-MediumItalic.otf */,
+				ED218DB696EF4E5CAC06D5BD /* Metropolis-Regular.otf */,
+				79BC3E3DD34042A982FE0920 /* Metropolis-RegularItalic.otf */,
+				DA795666D2BE4F3BBD136F68 /* Metropolis-SemiBold.otf */,
+				8488D051394B4E21B522616B /* Metropolis-SemiBoldItalic.otf */,
+				3E14052B77C24F1F98C9CAA4 /* Metropolis-Thin.otf */,
+				0B2D7663FC3E4B9AAA413C71 /* Metropolis-ThinItalic.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +326,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				D5630BD78EF7740E1B8F21D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,12 +382,16 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 4L5C4T9FQ2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 4L5C4T9FQ2;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -308,6 +409,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +438,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6582D12B262347B700CDCC5B /* icomoon.ttf in Resources */,
+				6582D13C262347B700CDCC5B /* Metropolis-Black.otf in Resources */,
+				6582D13D262347B700CDCC5B /* Metropolis-BlackItalic.otf in Resources */,
+				6582D13E262347B700CDCC5B /* Metropolis-Bold.otf in Resources */,
+				6582D13F262347B700CDCC5B /* Metropolis-BoldItalic.otf in Resources */,
+				6582D140262347B700CDCC5B /* Metropolis-ExtraBold.otf in Resources */,
+				6582D141262347B700CDCC5B /* Metropolis-ExtraBoldItalic.otf in Resources */,
+				6582D142262347B700CDCC5B /* Metropolis-ExtraLight.otf in Resources */,
+				6582D143262347B700CDCC5B /* Metropolis-ExtraLightItalic.otf in Resources */,
+				6582D144262347B700CDCC5B /* Metropolis-Light.otf in Resources */,
+				6582D145262347B700CDCC5B /* Metropolis-LightItalic.otf in Resources */,
+				6582D146262347B700CDCC5B /* Metropolis-Medium.otf in Resources */,
+				6582D147262347B700CDCC5B /* Metropolis-MediumItalic.otf in Resources */,
+				6582D148262347B700CDCC5B /* Metropolis-Regular.otf in Resources */,
+				6582D149262347B700CDCC5B /* Metropolis-RegularItalic.otf in Resources */,
+				6582D14A262347B700CDCC5B /* Metropolis-SemiBold.otf in Resources */,
+				6582D14B262347B700CDCC5B /* Metropolis-SemiBoldItalic.otf in Resources */,
+				6582D14C262347B700CDCC5B /* Metropolis-Thin.otf in Resources */,
+				6582D14D262347B700CDCC5B /* Metropolis-ThinItalic.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -371,7 +492,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -473,6 +594,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5630BD78EF7740E1B8F21D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyApp/Pods-MyApp-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyApp/Pods-MyApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -583,6 +752,7 @@
 			baseConfigurationReference = 4204C6C5E7C6BA6628A378E9 /* Pods-MyAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4L5C4T9FQ2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -607,6 +777,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4L5C4T9FQ2;
 				INFOPLIST_FILE = MyAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -628,6 +799,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 4L5C4T9FQ2;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -635,7 +807,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daczko.MyApp;
 				PRODUCT_NAME = MyApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -647,6 +819,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4L5C4T9FQ2;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -654,7 +827,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daczko.MyApp;
 				PRODUCT_NAME = MyApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

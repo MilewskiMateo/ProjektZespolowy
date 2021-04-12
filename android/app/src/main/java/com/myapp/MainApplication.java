@@ -1,7 +1,8 @@
 package com.myapp;
 
 import com.myapp.generated.BasePackageList;
-
+import android.database.CursorWindow;
+import java.lang.reflect.Field;
 import android.app.Application;
 import android.content.Context;
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
@@ -59,6 +60,15 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+    try {
+  Field field = CursorWindow.class.getDeclaredField("sCursorWindowSize");
+  field.setAccessible(true);
+  field.set(null, 100 * 1024 * 1024); //the 100MB is the new size
+} catch (Exception e) {
+  if (e!=null) {
+    e.printStackTrace();
+  }
+}
   }
 
   /**
