@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, View, Text} from 'react-native';
 import DropShadow from 'react-native-drop-shadow';
 import {Colors, Typography} from '../../../styles';
 
@@ -11,9 +11,11 @@ const TopTabBarButton = ({icon, label, selected, onPress}) => {
 
   return (
     <TouchableOpacity onPress={onPress}>
-      <DropShadow style={s.container}>
-        <Icon name={icon} size={iconSize} color={s.label.color} />
-        <Text style={[Typography.HEADERS.H4, s.label]}>{label}</Text>
+      <DropShadow style={s.shadow}>
+        <View style={s.container}>
+          <Icon name={icon} size={iconSize} color={s.label.color} />
+          <Text style={[Typography.HEADERS.H4, s.label]}>{label}</Text>
+        </View>
       </DropShadow>
     </TouchableOpacity>
   );
@@ -28,6 +30,12 @@ const styles = selected =>
       paddingHorizontal: 14,
       backgroundColor: selected ? Colors.PRIMARY_COLOR : Colors.WHITE_COLOR,
       borderRadius: 23,
+    },
+    label: {
+      marginLeft: 8,
+      color: selected ? Colors.WHITE_COLOR : Colors.DARK_COLOR,
+    },
+    shadow: {
       shadowColor: '#000',
       shadowOffset: {
         width: 0,
@@ -35,10 +43,6 @@ const styles = selected =>
       },
       shadowOpacity: 0.09,
       shadowRadius: 47,
-    },
-    label: {
-      marginLeft: 8,
-      color: selected ? Colors.WHITE_COLOR : Colors.DARK_COLOR,
     },
   });
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Typography} from '../styles';
 

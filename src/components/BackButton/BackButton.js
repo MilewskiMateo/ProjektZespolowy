@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Colors} from '../../styles';
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {StyleSheet, TouchableOpacity, View, Text} from 'react-native';
-import DropShadow from 'react-native-drop-shadow';
 import {Colors, Typography} from '../../styles';
 
 const Button = ({label, secondary, onPress}) => {
