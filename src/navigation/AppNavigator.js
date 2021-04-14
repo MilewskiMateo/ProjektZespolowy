@@ -7,6 +7,7 @@ import SearchScreen from '../screens/SearchScreen';
 import RecognitionScreen from '../screens/RecognitionScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import GetStartedScreen from '../screens/GetStartedScreen';
+import DogScreen from '../screens/DogScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const AppNavigator = () => {
       <Stack.Screen name={'HomeScreen'} component={HomeScreen} />
       <Stack.Screen name={'SearchScreen'} component={SearchScreen} />
       <Stack.Screen name={'RecognitionScreen'} component={RecognitionScreen} />
+      <Stack.Screen name={'DogScreen'} component={DogScreen} />
     </Stack.Navigator>
   );
 };

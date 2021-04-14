@@ -2,10 +2,11 @@ import {iterateObserversSafely} from '@apollo/client/utilities';
 import * as React from 'react';
 import {StyleSheet, View, Text, FlatList} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {Typography} from '../../styles';
 
 import HomeListItem from './subcomponents/HomeListItem';
 
-const RenderItem = ({item, rerender}) => {
+const RenderItem = ({item, rerender, n}) => {
   return (
     <HomeListItem
       label={item.label}
@@ -14,13 +15,12 @@ const RenderItem = ({item, rerender}) => {
       favourite={item.favourite}
       rerender={rerender}
       id={item.id}
-      // onPress={async () => await asHelper.changeFavourite(id)}
-      // onPress={() => console.log(item.favourite)}
+      onPress={() => n.navigate('DogScreen', {item: item})}
     />
   );
 };
 
-const HomeList = ({rerender, data}) => {
+const HomeList = ({rerender, data, n}) => {
   const insets = useSafeAreaInsets();
   const s = styles(insets);
 
@@ -30,10 +30,17 @@ const HomeList = ({rerender, data}) => {
       showsHorizontalScrollIndicator={false}
       style={s.container}
       data={data}
-      renderItem={({item}) => <RenderItem item={item} rerender={rerender} />}
+      renderItem={({item}) => (
+        <RenderItem item={item} rerender={rerender} n={n} />
+      )}
       keyExtractor={item => item.id}
       ItemSeparatorComponent={() => <View style={s.separator} />}
       ListFooterComponent={() => <View style={s.footer} />}
+      ListEmptyComponent={() => (
+        <Text style={[Typography.HEADERS.H1, s.nothing]}>
+          Unfortunately, we{'\n'}found nothing
+        </Text>
+      )}
     />
   );
 };
@@ -52,6 +59,9 @@ const styles = insets =>
     },
     footer: {
       width: 40,
+    },
+    nothing: {
+      marginTop: 40,
     },
   });
 

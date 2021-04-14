@@ -10,15 +10,20 @@ export default ({navigation, route}) => {
   const image = JSON.parse(route.params.image);
 
   React.useEffect(() => {
+    const item = {
+      id: Date.now().toString(),
+      label: 'Labrador Retriver' + Date.now().toString(),
+      percent: 95,
+      imageUri: 'data:image/png;base64,'.concat(image.base64),
+      favourite: false,
+      date: Date.now(),
+    };
     async function add() {
-      await asHelper.addData({
-        id: Date.now().toString(),
-        label: 'Labrador Retriver',
-        percent: 95,
-        imageUri: 'data:image/png;base64,'.concat(image.base64),
-        favourite: true,
-      });
-      //   console.log(image.base64);
+      await asHelper.addData(item);
+      setTimeout(function() {
+        navigation.navigate('HomeScreen');
+        navigation.navigate('DogScreen', {item: item});
+      }, 2000);
     }
     add();
   }, []);
@@ -33,8 +38,7 @@ export default ({navigation, route}) => {
       </Text>
       <View style={s.imageContainer}>
         <Image
-          //   source={require('../assets/images/progress.png')}
-          source={{uri: 'data:image/png;base64,'.concat(image.base64)}}
+          source={require('../assets/images/progress.png')}
           resizeMode={'cover'}
           style={s.image}
         />

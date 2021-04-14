@@ -3,30 +3,17 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
-  View,
   ImageBackground,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Colors, Typography} from '../../../styles';
-import asHelper from '../../../utils/as.helper';
-import Favourite from '../../Favourite/Favourite';
 
-const HomeListItem = ({
-  label,
-  percent,
-  imageUri,
-  favourite,
-  onPress,
-  id,
-  rerender,
-}) => {
-  async function handleFavourite() {
-    await asHelper.changeFavourite(id);
-    rerender();
-  }
-
+const VerticalListItem = ({label, percent, imageUri, disabled, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={onPress}
+      disabled={disabled}>
       <ImageBackground source={{uri: imageUri}} style={styles.image}>
         <LinearGradient
           locations={[0, 0.2, 0.6]}
@@ -40,9 +27,6 @@ const HomeListItem = ({
           <Text style={[Typography.HEADERS.H3, styles.percent]}>
             {percent + '%'}
           </Text>
-          <View style={styles.favouriteContainer}>
-            <Favourite isFavourite={favourite} onPress={handleFavourite} />
-          </View>
         </LinearGradient>
       </ImageBackground>
     </TouchableOpacity>
@@ -52,7 +36,7 @@ const HomeListItem = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: 240,
+    height: 157,
     borderRadius: 36,
     overflow: 'hidden',
   },
@@ -62,8 +46,7 @@ const styles = StyleSheet.create({
   },
   mask: {
     flex: 1,
-    justifyContent: 'center',
-    padding: 32,
+    padding: 22,
     backgroundColor: Colors.DARK_COLOR_40,
   },
   label: {
@@ -73,12 +56,6 @@ const styles = StyleSheet.create({
     marginTop: 2,
     color: Colors.WHITE_COLOR,
   },
-  favouriteContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-  },
 });
 
-export default HomeListItem;
+export default VerticalListItem;

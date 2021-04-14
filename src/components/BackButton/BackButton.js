@@ -5,13 +5,13 @@ import {Colors} from '../../styles';
 
 import Icon from '../../utils/Icon';
 
-const BackButton = () => {
+const BackButton = ({color = Colors.DARK_COLOR}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.container}
       onPress={() => navigation.goBack()}>
-      <Icon name={'arrow-left'} size={27} color={Colors.DARK_COLOR} />
+      <Icon name={'arrow-left'} size={27} color={color} />
     </TouchableOpacity>
   );
 };

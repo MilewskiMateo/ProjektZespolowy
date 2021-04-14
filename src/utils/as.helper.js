@@ -27,16 +27,21 @@ async function storeData(value) {
 async function changeFavourite(id) {
   const data = await getData();
   objIndex = data.findIndex(obj => obj.id === id);
-  console.log(data[objIndex].favourite);
   data[objIndex].favourite = !data[objIndex].favourite;
-  console.log(data[objIndex].favourite);
   await storeData(data);
+}
+
+async function deleteData(id) {
+  const data = await getData();
+  const tmp = data.filter(d => d.id !== id);
+  await storeData(tmp);
 }
 
 const asHelper = {
   getData,
   addData,
   changeFavourite,
+  deleteData,
   storeData,
 };
 

@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   separator: {
-    width: 17,
+    width: 10,
   },
 });
 

@@ -10,6 +10,12 @@ export const HEADERS = StyleSheet.create({
   },
   H2: {
     fontFamily: 'Metropolis-Black',
+    fontSize: 24,
+    lineHeight: 28,
+    color: Colors.DARK_COLOR,
+  },
+  H3: {
+    fontFamily: 'Metropolis-Black',
     fontSize: 20,
     lineHeight: 24,
     color: Colors.DARK_COLOR,
@@ -31,6 +37,12 @@ export const HEADERS = StyleSheet.create({
 export const BODY = StyleSheet.create({
   SEMIBOLD: {
     fontFamily: 'Metropolis-SemiBold',
+    fontSize: 14,
+    lineHeight: 22,
+    color: Colors.GRAY_COLOR,
+  },
+  MEDIUM: {
+    fontFamily: 'Metropolis-Medium',
     fontSize: 14,
     lineHeight: 22,
     color: Colors.GRAY_COLOR,

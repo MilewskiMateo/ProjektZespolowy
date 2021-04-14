@@ -1,61 +1,88 @@
 import * as React from 'react';
-import {
-  SafeAreaView,
-  TextInput,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import {View, TextInput, StyleSheet} from 'react-native';
+import {useIsFocused} from '@react-navigation/native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Colors, Typography} from '../styles';
 
 import BackButton from '../components/BackButton/BackButton';
 import asHelper from '../utils/as.helper';
+import DropShadow from 'react-native-drop-shadow';
+import VerticalList from '../components/VerticalList/VerticalList';
 
-export default ({navigation}) => {
+export default ({navigation, route}) => {
+  const insets = useSafeAreaInsets();
+  const s = styles(insets);
+  const isFocused = useIsFocused();
+
+  // const {data} = route.params;
+
   const [value, onChangeText] = React.useState('');
-  const [aa, bb] = React.useState('');
+  const [data, setData] = React.useState([]);
 
-  const data = [];
+  React.useEffect(() => {
+    async function fetch() {
+      const data = await asHelper.getData();
+      setData(data);
+    }
+    fetch();
+  }, [isFocused]);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={s.container}>
       <BackButton />
-      <TextInput
-        style={[Typography.HEADERS.H4, styles.searchInput]}
-        onChangeText={text => onChangeText(text)}
-        value={value}
-        placeholder={'What are you looking for?'}
-        placeholderTextColor={Colors.DARK_COLOR}
-        selectionColor={Colors.PRIMARY_COLOR}
-      />
-      <TouchableOpacity
+      <DropShadow style={s.shadow}>
+        <TextInput
+          style={[Typography.HEADERS.H4, s.searchInput]}
+          onChangeText={text => onChangeText(text)}
+          value={value}
+          placeholder={'What are you looking for?'}
+          placeholderTextColor={Colors.DARK_COLOR}
+          selectionColor={Colors.PRIMARY_COLOR}
+        />
+      </DropShadow>
+      <View style={s.list}>
+        <VerticalList
+          data={data.filter(d =>
+            d.label.toLowerCase().includes(value.toLowerCase()),
+          )}
+          n={navigation}
+        />
+      </View>
+
+      {/* <TouchableOpacity
         onPress={async () => {
           await asHelper.storeData(data);
-          //   console.log(await asHelper.getData());
         }}>
         <Text>GET</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+      </TouchableOpacity> */}
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginHorizontal: 20,
-  },
-  searchInput: {
-    height: 58,
-    padding: 14,
-    backgroundColor: Colors.WHITE_COLOR,
-    borderRadius: 23,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 0,
+const styles = insets =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      marginHorizontal: 20,
+      marginTop: insets.top,
     },
-    shadowOpacity: 0.09,
-    shadowRadius: 47,
-  },
-});
+    searchInput: {
+      height: 58,
+      padding: 14,
+      backgroundColor: Colors.WHITE_COLOR,
+      borderRadius: 23,
+    },
+    shadow: {
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      shadowOpacity: 0.09,
+      shadowRadius: 47,
+    },
+    list: {
+      flex: 1,
+      paddingTop: 20,
+    },
+  });

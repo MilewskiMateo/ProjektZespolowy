@@ -47,10 +47,11 @@ export default ({navigation}) => {
               ? data.filter(d => d.favourite === true)
               : data.filter(d => Date.now() - d.date <= 86400000)
           }
+          n={navigation}
         />
       )}
 
-      <BottomTabBar navigation={navigation} active={'home'} />
+      <BottomTabBar navigation={navigation} active={'home'} data={data} />
     </SafeAreaView>
   );
 };
@@ -62,8 +63,8 @@ const styles = insets =>
       marginHorizontal: 20,
     },
     header: {
-      marginTop: insets.top > 30 ? 112 : 56,
-      marginBottom: 56,
+      marginTop: insets.top > 30 ? 80 : 40,
+      marginBottom: 40,
       paddingRight: 5,
     },
   });
