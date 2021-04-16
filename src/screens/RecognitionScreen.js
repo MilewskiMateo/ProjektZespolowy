@@ -3,6 +3,8 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Typography} from '../styles';
 import asHelper from '../utils/as.helper';
+import recognitionHelper from '../utils/recognition/recognition.helper';
+import getDescription from '../utils/recognition/getDescription';
 
 export default ({navigation, route}) => {
   const insets = useSafeAreaInsets();
@@ -10,22 +12,34 @@ export default ({navigation, route}) => {
   const image = JSON.parse(route.params.image);
 
   React.useEffect(() => {
-    const item = {
-      id: Date.now().toString(),
-      label: 'Labrador Retriver' + Date.now().toString(),
-      percent: 95,
-      imageUri: 'data:image/png;base64,'.concat(image.base64),
-      favourite: false,
-      date: Date.now(),
-    };
-    async function add() {
+    async function predict() {
+      const result = await recognitionHelper.getPredition(image.base64);
+      const info = await getDescription(result[0].className);
+
+      listOfOtherPredictions = [];
+      for (let index = 1; index < result.length; index++) {
+        result[index]['id'] = index.toString();
+        listOfOtherPredictions.push(result[index]);
+      }
+
+      const item = {
+        id: Date.now().toString(),
+        label: result[0].className,
+        percent: Math.round(result[0].probability * 100),
+        info: info,
+        imageUri: 'data:image/png;base64,'.concat(image.base64),
+        favourite: false,
+        date: Date.now(),
+        other: listOfOtherPredictions,
+      };
+
       await asHelper.addData(item);
       setTimeout(function() {
         navigation.navigate('HomeScreen');
         navigation.navigate('DogScreen', {item: item});
       }, 2000);
     }
-    add();
+    predict();
   }, []);
 
   return (

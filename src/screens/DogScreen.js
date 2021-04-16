@@ -22,9 +22,9 @@ const RenderItem = ({item, n}) => {
   return (
     <View style={{paddingHorizontal: 20}}>
       <VerticalListItem
-        label={item.label}
-        percent={item.percent}
-        imageUri={item.imageUri}
+        label={item.className}
+        percent={Math.round(item.probability * 100)}
+        // imageUri={item.imageUri}
         disabled={true}
         onPress={() => n.push('DogScreen', {item: item})}
       />
@@ -40,17 +40,9 @@ export default ({navigation, route}) => {
   const [data, setData] = React.useState([]);
   const [isFav, setFav] = React.useState(item.favourite);
 
-  /* TUTAJ COŚ INNEGO !!!! */
-
   React.useEffect(() => {
-    async function fetch() {
-      const data = await asHelper.getData();
-      setData(data);
-    }
-    fetch();
+    setData(item.other);
   }, []);
-
-  /* ------------------- */
 
   const handleFav = async () => {
     await asHelper.changeFavourite(item.id);
@@ -77,8 +69,9 @@ export default ({navigation, route}) => {
 
           <Text style={[Typography.HEADERS.H2, s.header]}>{item.label}</Text>
           <Text style={Typography.BODY.MEDIUM}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac velit in
-            nascetur pulvinar dignissim. Lectus elit odio hendrerit vel sed{' '}
+            {item.info
+              ? item.info.description
+              : "Unfortunately we don't have good description."}
           </Text>
           <View style={s.menu}>
             <Favourite isFavourite={isFav} onPress={handleFav} />
