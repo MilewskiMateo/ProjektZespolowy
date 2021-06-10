@@ -19,6 +19,9 @@ const BackButton = ({color = Colors.DARK_COLOR}) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    borderRadius: 10,
+    padding: 5,
   },
 });
 

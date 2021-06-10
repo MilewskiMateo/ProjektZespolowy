@@ -14,19 +14,20 @@ export default ({navigation, route}) => {
   React.useEffect(() => {
     async function predict() {
       const result = await recognitionHelper.getPredition(image.base64);
+      console.log(result[0].className);
       const info = await getDescription(result[0].className);
 
       listOfOtherPredictions = [];
       for (let index = 1; index < result.length; index++) {
         result[index]['id'] = index.toString();
-        otherInfo =  await getDescription(result[index].className);
-        result[index]['image'] = otherInfo && otherInfo.image
+        otherInfo = await getDescription(result[index].className);
+        result[index]['image'] = otherInfo && otherInfo.image;
         listOfOtherPredictions.push(result[index]);
       }
 
       const item = {
         id: Date.now().toString(),
-        label: result[0].className,
+        label: info.breedName,
         percent: Math.round(result[0].probability * 100),
         info: info,
         imageUri: 'data:image/png;base64,'.concat(image.base64),

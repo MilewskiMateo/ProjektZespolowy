@@ -37,7 +37,7 @@ const BottomTabBar = ({navigation, data}) => {
                   maxHeight: 1200,
                   maxWidth: 1200,
                 },
-                response => {
+                (response) => {
                   if (!response.didCancel && !response.errorCode) {
                     navigation.navigate('RecognitionScreen', {
                       image: JSON.stringify(response),
@@ -57,10 +57,10 @@ const BottomTabBar = ({navigation, data}) => {
                 {
                   mediaType: 'photo',
                   includeBase64: true,
-                  maxHeight: 1200,
-                  maxWidth: 1200,
+                  maxHeight: 1024,
+                  maxWidth: 1024,
                 },
-                response => {
+                (response) => {
                   if (!response.didCancel && !response.errorCode) {
                     navigation.navigate('RecognitionScreen', {
                       image: JSON.stringify(response),
@@ -80,7 +80,7 @@ const BottomTabBar = ({navigation, data}) => {
   );
 };
 
-const styles = insets =>
+const styles = (insets) =>
   StyleSheet.create({
     container: {
       position: 'absolute',

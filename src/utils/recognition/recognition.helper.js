@@ -10,25 +10,36 @@ async function loadModel() {
 }
 
 async function getPredition(imgBase64) {
+  tf.setBackend('cpu');
   await tf.ready();
+  console.log('hop');
   const model = await mobilenet.load();
-  // const model = await tf.loadGraphModel('http://daczko.pl/fluffi/model.json');
+  console.log('zupa');
 
-  // const modelUrl =
-  //   'https://storage.googleapis.com/tfjs-models/savedmodel/mobilenet_v2_1.0_224/model.json';
-  // const model = await tf.loadGraphModel(modelUrl);
+  // const modelJson = require('../../assets/model.json');
+  // const modelWeights = require(`../../assets/group1-shard1of1.bin`);
+
+  // const model = await tf.loadLayersModel(
+  //   tfReact.bundleResourceIO(modelJson, modelWeights),
+  // );
+
   if (model == null || model == undefined) {
     return 'Model is empty or undefined';
   }
+
+  console.log('mam model');
+
+  // const imageDataArrayBuffer = tf.util.encodeString(imgBase64, 'base64').buffer;
+  // const imageData = new Uint8Array(imageDataArrayBuffer);
+  // const imageTensor = tfReact.decodeJpeg(imageData);
+
   const imageDataArrayBuffer = decode(imgBase64);
   const imageData = new Uint8Array(imageDataArrayBuffer);
   const imageTensor = tfReact.decodeJpeg(imageData);
 
-  // imageTensor = imageTensor.reshape([1, 224, 224, 3]);
-
+  // const prediction = model.predict(imageTensor.reshape([1, 1024, 1024, 3]));
   const prediction = model.classify(imageTensor);
-  // const prediction = model.predict(imageTensor);
-
+  console.log(prediction);
   return prediction;
 }
 

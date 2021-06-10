@@ -807,7 +807,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daczko.MyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.daczko.fluffi;
 				PRODUCT_NAME = MyApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -827,7 +827,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daczko.MyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.daczko.fluffi;
 				PRODUCT_NAME = MyApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

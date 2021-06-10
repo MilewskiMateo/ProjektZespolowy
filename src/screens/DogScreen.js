@@ -19,8 +19,6 @@ import Favourite from '../components/Favourite/Favourite';
 import DeleteButton from '../components/DeleteButton/DeleteButton';
 
 const RenderItem = ({item, n}) => {
-
-  
   return (
     <View style={{paddingHorizontal: 20}}>
       <VerticalListItem
@@ -164,6 +162,7 @@ const styles = insets =>
     },
     header: {
       marginBottom: 10,
+      textTransform: 'capitalize',
     },
     other: {
       marginTop: 36,

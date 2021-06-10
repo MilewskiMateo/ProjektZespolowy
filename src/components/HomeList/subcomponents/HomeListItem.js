@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   },
   label: {
     color: Colors.WHITE_COLOR,
+    textTransform: 'capitalize',
   },
   percent: {
     marginTop: 2,
