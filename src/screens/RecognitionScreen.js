@@ -19,6 +19,8 @@ export default ({navigation, route}) => {
       listOfOtherPredictions = [];
       for (let index = 1; index < result.length; index++) {
         result[index]['id'] = index.toString();
+        otherInfo =  await getDescription(result[index].className);
+        result[index]['image'] = otherInfo && otherInfo.image
         listOfOtherPredictions.push(result[index]);
       }
 

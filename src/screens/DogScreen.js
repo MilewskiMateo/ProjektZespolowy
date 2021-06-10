@@ -19,12 +19,14 @@ import Favourite from '../components/Favourite/Favourite';
 import DeleteButton from '../components/DeleteButton/DeleteButton';
 
 const RenderItem = ({item, n}) => {
+
+  
   return (
     <View style={{paddingHorizontal: 20}}>
       <VerticalListItem
         label={item.className}
         percent={Math.round(item.probability * 100)}
-        // imageUri={item.imageUri}
+        imageUri={item.image}
         disabled={true}
         onPress={() => n.push('DogScreen', {item: item})}
       />

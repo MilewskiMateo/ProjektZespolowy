@@ -1,4 +1,3 @@
-import {iterateObserversSafely} from '@apollo/client/utilities';
 import * as React from 'react';
 import {StyleSheet, View, Text, FlatList} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
